@@ -14,7 +14,9 @@ class MainActivity : AppCompatActivity() {
 //        EditText(inputEdt)에 적힌 값을 받아서 TextView(resultTxt)에 내용으로 반영
 
         okBtn.setOnClickListener {
-            
+
+           var inputString =  inputEdt.text.toString()
+            resultTxt.text = inputString
         }
 
 
