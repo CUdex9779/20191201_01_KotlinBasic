@@ -23,7 +23,22 @@ class MainActivity : AppCompatActivity() {
 //            확인버튼이 눌렸는지 로그
             Log.d("확인 버튼 클릭",inputString)
 
-            Toast.makeText(this, "내용이 반영되었습니다.", Toast.LENGTH_SHORT).show()
+//            if (inputString == "Hello"){
+//                Toast.makeText(this , "안녕반가워!" , Toast.LENGTH_SHORT).show()
+//            }
+//            else if (inputString == "bye"){
+//                Toast.makeText(this , "잘가!" , Toast.LENGTH_SHORT).show()
+//            }
+//            else{
+//                Toast.makeText(this , "무슨 말이야?" , Toast.LENGTH_SHORT).show()
+//            }
+
+            when (inputString){
+                "hello" -> {Toast.makeText(this , "안녕반가워!" , Toast.LENGTH_SHORT).show()
+                Log.d("환영인사","환영인사인경우")}
+                "bye" -> {Toast.makeText(this , "잘가!" , Toast.LENGTH_SHORT).show()}
+                else -> {Toast.makeText(this , "무슨 말이야?" , Toast.LENGTH_SHORT).show()}
+            }
         }
 
         okBtn.setOnLongClickListener {
